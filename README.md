@@ -1,3 +1,3 @@
 # CS4743 Student Project Fall 2021
 
-Use this repo for your class project!
+Spring boot management system assignment for Enterprise software engineering class CS4743
