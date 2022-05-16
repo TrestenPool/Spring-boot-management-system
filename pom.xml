@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+<!-- ############################## MAVEN SETTINGS ##############################  -->
+    <groupId>main</groupId>
+    <artifactId>cs4743-fall-2021</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- from spring boot tutorial -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.3.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <!-- Compiler settings -->
+    <properties>
+        <java.version>11</java.version> <!-- from spring boot tutorial -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+
+
+    <!-- ############################## DEPENDENCIES SETTINGS ##############################  -->
+    <dependencies>
+        <!-- #### JAVA FX DEPENDENCIES ####  -->
+        <!--javafx controls -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>14</version>
+        </dependency>
+        <!-- java-fxml -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>14</version>
+        </dependency>
+
+        <!-- #### SPRING BOOT ####  -->
+        <!-- starter-jpa -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- starter-web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Audit table helper -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- h2 db -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- #### HIBERNATE ####  -->
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.2.Final</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>javax.validation</groupId>-->
+<!--            <artifactId>validation-api</artifactId>-->
+<!--            <version>2.0.0.Final</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+
+
+        <!-- #### MISCALLENOUS ####  -->
+        <!-- Log4j -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.14.1</version>
+        </dependency>
+        <!-- JSON -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20200518</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.12</version>
+        </dependency>
+        <!-- Mysql connection -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.17</version>
+        </dependency>
+
+    </dependencies>
+    <!-- DEPENDENCIES TAG -->
+
+
+
+
+
+
+
+    <!-- ############################## BUILD SETTINGS ##############################  -->
+    <build>
+
+        <!-- ############# PLUGINS #############  -->
+        <plugins>
+
+            <!--JAVA-FX -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.4</version>
+                <!-- Choose the starting point for the program -->
+                <configuration>
+                    <mainClass>mvc.AppMain</mainClass> <!-- change me to change starting point of javafx program -->
+                </configuration>
+            </plugin>
+
+            <!-- SPRING-BOOT -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

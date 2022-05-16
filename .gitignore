@@ -1,0 +1,9 @@
+cs4743_Project.iml
+target
+.idea
+logs
+src/main/java/miscellaneous/HttpDemos
+DocRobCode
+src/main/java/miscellaneous/jdbc_demo
+src/main/resources/config.properties
+ScreenShots/

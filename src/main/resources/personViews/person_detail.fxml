@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="559.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutY="5.0" pickOnBounds="false" prefHeight="398.0" prefWidth="482.0" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="552.0" text="Person Detail">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="36.0" prefWidth="567.0" />
+            <HBox layoutX="10.0" layoutY="86.0" prefHeight="43.0" prefWidth="567.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="116.0" text="First Name" />
+                  <TextField fx:id="firstName" prefHeight="24.0" prefWidth="302.0" promptText="Doc">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="30.0" layoutY="122.0" prefHeight="43.0" prefWidth="567.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="116.0" text="Last Name" />
+                  <TextField fx:id="lastName" prefHeight="24.0" prefWidth="302.0" promptText="Rob">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="30.0" layoutY="165.0" prefHeight="48.0" prefWidth="397.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="55.0" text="ID">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="id" disable="true" prefHeight="24.0" prefWidth="52.0" promptText="1">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="70.0" right="100.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="80.0" layoutY="213.0" prefHeight="48.0" prefWidth="397.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="55.0" text="Age">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="age" disable="true" prefHeight="24.0" prefWidth="52.0" promptText="18">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="70.0" right="100.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="208.0" prefHeight="43.0" prefWidth="567.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="116.0" text="Date Of Birth" />
+                  <DatePicker fx:id="dob" promptText="9/4/2003">
+                     <HBox.margin>
+                        <Insets left="10.0" top="8.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="30.0" layoutY="309.0" prefHeight="43.0" prefWidth="567.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="150.0" right="150.0" />
+               </VBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#saveButtonClicked" text="Save">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="50.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TabPane fx:id="tabPane" layoutX="30.0" onMouseClicked="#showAuditTrail" prefHeight="35.0" prefWidth="395.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="personDetailTab" text="Person Detail" />
+          <Tab fx:id="auditTrailTab" text="Audit Trail" />
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

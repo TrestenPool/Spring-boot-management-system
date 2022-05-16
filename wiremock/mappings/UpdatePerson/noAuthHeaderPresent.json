@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "PUT",
+    "urlPathPattern": "/people/1",
+    "headers" : {
+      "Authorization" : {
+        "absent": true
+      }
+    }
+  },
+  "response": {
+    "status": 401
+  }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.control.PasswordField?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane alignment="CENTER" blendMode="SRC_ATOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="471.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="138.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="333.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="136.0" minHeight="0.0" prefHeight="82.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="106.0" text="User name" />
+            <Label alignment="CENTER" prefHeight="16.0" prefWidth="112.0" text="Password" GridPane.rowIndex="1" />
+            <TextField fx:id="username" GridPane.columnIndex="1" />
+            <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#loginButtonClicked" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

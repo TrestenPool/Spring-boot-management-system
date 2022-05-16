@@ -1,0 +1,20 @@
+{
+  "request": {
+    "method": "PUT",
+    "urlPathPattern": "/people/1",
+    "headers" : {
+      "Authorization" : {
+        "equalTo" : "i am a session token"
+      }
+    },
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"first_name\":\"Bobby\"}"
+    } ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

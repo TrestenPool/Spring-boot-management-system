@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="559.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView fx:id="auditListView" layoutX="10.0" layoutY="63.0" prefHeight="311.0" prefWidth="535.0" />
+      <TabPane fx:id="tabPane" layoutX="30.0" onMouseClicked="#showDetailView" prefHeight="35.0" prefWidth="395.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="personDetailTab" text="Person Detail" />
+          <Tab fx:id="auditTrailTab" text="Audit Trail" />
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
